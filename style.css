@@ -1,0 +1,69 @@
+@font-face {
+    font-family: PlaywriteIN;
+    src: url(PlaywriteIN-Regular.ttf);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    background-color: #ADD8E6;
+    font-family: PlaywriteIN;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container{
+    display: flex;
+    height: 768px;
+    width: 457px;
+    background-color: #1a2226;
+    flex-direction: column;
+    flex: 1;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 30px;
+    color: white;
+    font-family: sans-serif;
+}
+
+.buttons{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.hook{
+    height: 95px;
+    width: 120px;
+    font-size: 20px;
+    background-color: #363e3f;
+    color: white;
+}
+
+.dark{
+    background-color: #2d3437;
+    color: white;
+}
+
+.after-equal{
+    color: white;
+    margin: 40px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.first-row, .second-row, .third-row, .fourth-row, .fifth-row, .sixth-row{
+    display: flex;
+    flex: 1;
+}
+
+.history{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
