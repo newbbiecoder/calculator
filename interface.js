@@ -43,6 +43,7 @@ function showDigits() {
                 waitingForNum2 = false;
                 justComputed = false;
             }
+            
             after_equal.textContent += num.textContent;
             console.log("Current after_equal.textContent:", after_equal.textContent);
         });
@@ -127,7 +128,7 @@ function computeResult() {
             break;
     }
 
-    console.log("Result:", result.toFixed(3));
+    console.log("Result:", result);
 
 
     before_equal.textContent = `${num1} ${operator_value} ${num2} =`; 
@@ -211,8 +212,165 @@ function dealSpecialFunctions(){
             newText = myArr.join('');
 
             after_equal.textContent = newText;
+
+            if(newText === ''){
+                after_equal.textContent = '0';
+            }
+
+        }
+    })
+
+    // dot button
+
+    decimal.addEventListener('click', () => {
+        if(!after_equal.textContent.includes('.')){
+            after_equal.textContent += ".";
         }
     })
 }
 
 dealSpecialFunctions();
+
+
+function handleKeyboardKeys(event){
+    let keyId = event.keyCode;
+
+    switch(keyId){
+        // zero
+        case 48:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "0"
+            break;
+        // one
+        case 49:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "1"
+            break;
+
+        // two
+        case 50:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "2"
+            break;
+
+        // three
+        case 51:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "3"
+            break;
+        
+        // four    
+        case 52:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "4"
+            break;
+        
+        // five
+        case 53:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "5"
+            break;
+        
+        // six
+        case 54:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "6"
+            break;
+        
+        // seven
+        case 55:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "7"
+            break;
+        
+        // eight
+        case 56:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "8"
+            break;
+        
+        // nine
+        case 57:
+            if(after_equal.textContent == "0"){
+                after_equal.textContent = "";
+            }
+            after_equal.textContent += "9"
+            break; 
+        
+        // decimal
+        case 190:
+            if(!after_equal.textContent.includes('.')){
+                after_equal.textContent += ".";
+            }
+            break;
+
+        // backspace
+        case 8:
+            if(after_equal.textContent == '0'){
+                return;
+            }
+            else{
+                let myArr = after_equal.textContent.split('');
+                myArr.splice(myArr.length - 1, 1);
+                newText = myArr.join('');
+    
+                after_equal.textContent = newText;
+    
+                if(newText === ''){
+                    after_equal.textContent = '0';
+                }
+            }
+            break;
+
+        // "p" for pie button
+        case 80:
+            after_equal.textContent = 3.14;
+            break;
+        
+        // "s" for square button
+        case 83:
+            after_equal.textContent = after_equal.textContent ** 2;
+            break;
+        
+        // "u" for under root button
+        case 85:
+            after_equal.textContent = Math.sqrt(after_equal.textContent);
+            break;
+
+        // "r" for CE button
+        case 82:
+            after_equal.textContent = 0;
+            break;
+        
+        // "c" for C button    
+        case 67:
+            after_equal.textContent = 0;
+            before_equal.textContent = '';
+            num1 = null;
+            num2 = null;
+            result = 0;
+            break;
+
+    }
+}
+
+document.addEventListener('keydown', handleKeyboardKeys)
+
