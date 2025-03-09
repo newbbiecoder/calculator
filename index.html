@@ -2,15 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
     
     <!-- Backspace button -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=backspace" />    
     
-    <!-- History button -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=history" /> -->
 </head>
 
 <body>
@@ -20,52 +18,51 @@
 
     <div class="container">
         <div class="header">
-            <div class="standard">Standard</div>
-            <button class="history" style="font-size:24px"> <img src="images/history_icon.png" height="40px" width="40px"></button>
+            Number Magic Starts Here!
         </div>
         <div class="before-equal"></div>
         <div class="after-equal">0</div>
         <div class="buttons">
             <div class="first-row">
-                <button class="hook dark">%</button>
-                <button class="hook dark">CE</button>
-                <button class="hook dark">C</button>
-                <button class="hook dark" style="font-size:24px"><span class="material-symbols-outlined">backspace</span></button>
+                <button class="hook dark operation pie">π</button>
+                <button class="hook dark clear-below">CE</button>
+                <button class="hook dark clear-all">C</button>
+                <button class="hook dark backspace" style="font-size:24px"><span class="material-symbols-outlined">backspace</span></button>
             </div>
 
             <div class="second-row">
-                <button class="hook dark">1/x</button>
-                <button class="hook dark">x²</button>
-                <button class="hook dark">√x²</button>
-                <button class="hook dark">÷</button>
+                <button class="hook dark operation reciprocal">1/x</button>
+                <button class="hook dark operation square">x²</button>
+                <button class="hook dark operation under-root-square">√x²</button>
+                <button class="hook dark operator divide">÷</button>
             </div>
 
             <div class="third-row">
-                <button class="hook">7</button>
-                <button class="hook">8</button>
-                <button class="hook">9</button>
-                <button class="hook dark">×</button>
+                <button class="hook number seven">7</button>
+                <button class="hook number eight">8</button>
+                <button class="hook number nine">9</button>
+                <button class="hook operator dark multiply">×</button>
             </div>
 
             <div class="fourth-row">
-                <button class="hook">4</button>
-                <button class="hook">5</button>
-                <button class="hook">6</button>
-                <button class="hook dark">-</button>
+                <button class="hook number four">4</button>
+                <button class="hook number five">5</button>
+                <button class="hook number six">6</button>
+                <button class="hook operator dark subtract">-</button>
             </div>
 
             <div class="fifth-row">
-                <button class="hook">1</button>
-                <button class="hook">2</button>
-                <button class="hook">3</button>
-                <button class="hook dark">+</button>
+                <button class="hook number one">1</button>
+                <button class="hook number two">2</button>
+                <button class="hook number three">3</button>
+                <button class="hook dark operator add">+</button>
             </div>
 
             <div class="sixth-row">
-                <button class="hook">+/-</button>
-                <button class="hook">0</button>
-                <button class="hook">.</button>
-                <button class="hook dark">=</button>
+                <button class="hook operation add-subtract">+/-</button>
+                <button class="hook number zero">0</button>
+                <button class="hook decimal">.</button>
+                <button class="hook operator dark equal">=</button>
             </div>
         </div>
     </div>
